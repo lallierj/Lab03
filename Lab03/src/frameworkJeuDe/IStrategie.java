@@ -9,27 +9,18 @@ Code(s) perm. : LALJ26059304
 				LUSA11049100
 Professeur : Dominic St‐Jacques
 Chargés de labo : Alex Levesque et Simon Robert
-Nom du fichier : Joueur.java
+Nom du fichier : IStrategie.java
 Date créé : 2015‐02-25
 Date dern. modif. 2015‐02-25
 *******************************************************
 Historique des modifications
 *******************************************************
-2015‐02‐25 Version initiale
-2015-02-25 Ajout du constructeur
+2015‐02‐25 Version initiale 
+2015-02-25 Ajout des méthodes calculerLeVainqueur et calculerScoreTour
 *******************************************************/
 package frameworkJeuDe;
 
-public class Joueur implements Comparable<Joueur> {
-	private String nom;
-	
-	public Joueur(String nom){
-		this.nom = nom;
-	}
-	@Override
-	public int compareTo(Joueur autreJoueur) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
+public interface IStrategie {
+	public Joueur calculerLeVainqueur(Jeu jeu);
+	public int calculerScoreTour(Jeu jeu);
 }
