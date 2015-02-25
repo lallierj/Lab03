@@ -23,10 +23,14 @@ package frameworkJeuDe;
 public class Jeu {
 	private String nom;
 	private int nbTours;
+	private int nbJoueurs;
+	private int nbDes;
 	
-	public Jeu(String nom, int nbTours){
+	public Jeu(String nom, int nbTours, int nbJoueurs, int nbDes){
 		this.nom = nom;
 		this.nbTours = nbTours;
+		this.nbJoueurs = nbJoueurs;
+		this.nbDes = nbDes;
 	}
 	
 	public int calculerScoreTour(){
