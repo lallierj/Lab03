@@ -20,11 +20,18 @@ Historique des modifications
 *******************************************************/
 package frameworkJeuDe;
 
-import java.util.Iterator;
-
 public class CollectionJoueurs{
 	private Joueur[] tabJoueurs;
+	private IterateurJoueur iterateur;
+	
 	public CollectionJoueurs(int nbJoueurs){
 		tabJoueurs = new Joueur[nbJoueurs];
+		iterateur = new IterateurJoueur(this);
+	}
+	public void addJoueur(Joueur joueur){
+		tabJoueurs[iterateur.getIndex()] = joueur;
+	}
+	public Joueur[] getTabJoueurs(){
+		return tabJoueurs.clone();
 	}
 }

@@ -23,6 +23,7 @@ package frameworkJeuDe;
 public class De implements Comparable<De> {
 	private int minValue;
 	private int maxValue;
+	private int value;
 	
 	public De(int minValue, int maxValue){
 		this.minValue = minValue;
@@ -30,12 +31,24 @@ public class De implements Comparable<De> {
 	}
 	
 	public int lancer(){
-		return (int) Math.round(Math.random() * (maxValue - minValue) + minValue);
+		value = (int) Math.round(Math.random() * (maxValue - minValue) + minValue);
+		return value;
+	}
+	
+	public int getValue(){
+		return value;
 	}
 	
 	@Override
 	public int compareTo(De autreDe) {
-		// TODO Auto-generated method stub
-		return 0;
+		if(value < autreDe.getValue()){
+			return -1;
+		}
+		else if(value == autreDe.getValue()){
+			return 0;
+		}
+		else{
+			return 1;
+		}
 	}
 }

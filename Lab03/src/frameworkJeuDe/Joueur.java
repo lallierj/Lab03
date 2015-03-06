@@ -22,14 +22,33 @@ package frameworkJeuDe;
 
 public class Joueur implements Comparable<Joueur> {
 	private String nom;
+	private int score;
 	
 	public Joueur(String nom){
 		this.nom = nom;
 	}
+	
+	public int getScore(){
+		return score;
+	}
+	
+	public String getNom(){
+		return nom;
+	}
+	
+	public void setScore(int newScore){
+		score = newScore;
+	}
 	@Override
 	public int compareTo(Joueur autreJoueur) {
-		// TODO Auto-generated method stub
-		return 0;
+		if(score < autreJoueur.getScore()){
+			return -1;
+		}
+		else if(score == autreJoueur.getScore()){
+			return 0;
+		}
+		else{
+			return 1;
+		}
 	}
-
 }

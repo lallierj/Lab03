@@ -20,11 +20,15 @@ Historique des modifications
 *******************************************************/
 package frameworkJeuDe;
 
-import java.util.Iterator;
-
 public class CollectionDes {
 	private De[] tabDes;
+	private IterateurDe iterateur;
+	
 	public CollectionDes(int nbDes){
 		tabDes = new De[nbDes];
+		iterateur = new IterateurDe(this);
+	}	
+	public void addDe(De de){
+		tabDes[iterateur.getIndex()] = de;
 	}
 }
