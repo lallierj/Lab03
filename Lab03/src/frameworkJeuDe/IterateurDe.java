@@ -15,13 +15,17 @@ public class IterateurDe implements Iterator<De> {
 	}
 	@Override
 	public boolean hasNext() {
-		
-		return false;
+		De[] tabDes = collectionDes.getTabDes();
+		return indexCourant + 1 < tabDes.length;
 	}
 
 	@Override
 	public De next() {
-		// TODO Auto-generated method stub
-		return null;
+		De[] tabDes = collectionDes.getTabDes();
+		indexCourant ++;
+		if(indexCourant == tabDes.length){
+			indexCourant = 0;
+		}
+		return tabDes[indexCourant];
 	}
 }

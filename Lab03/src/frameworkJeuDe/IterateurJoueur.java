@@ -16,12 +16,7 @@ public class IterateurJoueur implements Iterator<Joueur> {
 	@Override
 	public boolean hasNext() {
 		Joueur[] tabJoueurs = collectionJoueurs.getTabJoueurs();
-		if(indexCourant + 1 < tabJoueurs.length){
-			return true;
-		}
-		else{
-			return false;
-		}
+		return indexCourant + 1 < tabJoueurs.length;
 	}
 
 	@Override

@@ -31,4 +31,7 @@ public class CollectionDes {
 	public void addDe(De de){
 		tabDes[iterateur.getIndex()] = de;
 	}
+	public De[] getTabDes(){
+		return tabDes.clone();
+	}
 }
