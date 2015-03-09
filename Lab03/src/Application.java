@@ -5,8 +5,10 @@ Groupe : 01
 Projet : Laboratoire #3
 Étudiant(e)(s) : Jérôme L'Allier-Décary
 				 Alexandre Lusignan
+				 Tristan Roy
 Code(s) perm. : LALJ26059304
 				LUSA11049100
+				ROYT05059408
 Professeur : Dominic St‐Jacques
 Chargés de labo : Alex Levesque et Simon Robert
 Nom du fichier : CollectionDes.java

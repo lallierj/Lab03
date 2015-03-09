@@ -20,20 +20,32 @@ Historique des modifications
 2015‐02‐25 Version initiale 
 2015-02-25 Ajout du constructeur
 *******************************************************/
-package frameworkJeuDe;
+package testUnitaireBunco;
 
-public class CollectionDes {
-	private De[] tabDes;
-	private IterateurDe iterateur;
+import frameworkJeuDe.Jeu;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+/**
+ * Test unitaire pour les méthodes de jeu
+ *
+ */
+
+
+public class JeuTest {
+	Jeu jeu = new Jeu("Bunco+",6,4,3);
 	
-	public CollectionDes(int nbDes){
-		tabDes = new De[nbDes];
-		iterateur = new IterateurDe(this);
-	}	
-	public void addDe(De de){
-		tabDes[iterateur.getIndex()] = de;
+	/**
+	 * Test de calculerScore
+	 *
+	 */
+	@Test
+	public void testCalculerScore() {
+		assertEquals(0,jeu.calculerScoreTour());
 	}
-	public De[] getTabDes(){
-		return tabDes.clone();
-	}
+	
+	
+
 }
