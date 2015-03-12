@@ -1,5 +1,8 @@
 package Bunco;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 import frameworkJeuDe.AbstractFabrique;
 import frameworkJeuDe.CollectionDes;
 import frameworkJeuDe.CollectionJoueurs;
@@ -14,7 +17,8 @@ public class Fabrique extends AbstractFabrique {
 
 	@Override
 	public Jeu creerJeu() {
-		return new Jeu("Bunco",6,3,3);
+		int nbJoueurs = Integer.parseInt(JOptionPane.showInputDialog(new JFrame(), "Entrez le nombre de joueurs", "2"));
+		return new Jeu("Bunco",6,nbJoueurs,3);
 	}
 
 	@Override
@@ -22,7 +26,8 @@ public class Fabrique extends AbstractFabrique {
 		CollectionJoueurs collectionJoueurs = new CollectionJoueurs(jeu.getNbJoueurs());
 		IterateurJoueur itr = collectionJoueurs.iterator();
 		for(int i = 0; i < jeu.getNbJoueurs();i++){
-			collectionJoueurs.add(new Joueur("Player "+ i+1));
+			String nom = JOptionPane.showInputDialog(new JFrame(), "Entrez le nom du joueur "+(i+1), "Joueur "+(i+1));
+			collectionJoueurs.add(new Joueur(nom));
 			itr.next();
 		}
 		return collectionJoueurs;
