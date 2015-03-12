@@ -38,7 +38,7 @@ public class CollectionJoueurs{
 		tabJoueurs[iterateur.getIndex()] = joueur;
 	}
 	public Joueur[] getTabJoueurs(){
-		return tabJoueurs.clone();
+		return tabJoueurs;
 	}
 	public IterateurJoueur iterator(){
 		return iterateur;
@@ -47,11 +47,10 @@ public class CollectionJoueurs{
 		return new CollectionJoueurs(tabJoueurs);
 	}
 	public CollectionJoueurs trierParScore(){
-		System.out.println("le tri est supposé se faire");
 		Joueur joueurTemp;
 		for(int i = 1; i < tabJoueurs.length; i++){
 			iterateur.reset();
-			for(int j = 1; j < tabJoueurs.length-j; j++){
+			for(int j = 1; j < tabJoueurs.length; j++){
 				if(iterateur.joueurCourant().compareTo(iterateur.prochainJoueur()) == -1){
 					joueurTemp = iterateur.joueurCourant();
 					iterateur.setJoueurCourant(iterateur.prochainJoueur());
