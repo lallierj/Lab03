@@ -11,7 +11,7 @@ Code(s) perm. : LALJ26059304
 				ROYT05059408
 Professeur : Dominic St‐Jacques
 Chargés de labo : Alex Levesque et Simon Robert
-Nom du fichier : CollectionDes.java
+Nom du fichier : JeuTest.java
 Date créé : 2015‐02-25
 Date dern. modif. 2015‐02-25
 *******************************************************
@@ -22,8 +22,7 @@ Historique des modifications
 *******************************************************/
 package testUnitaireBunco;
 
-import frameworkJeuDe.Jeu;
-
+import frameworkJeuDe.*;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -35,17 +34,55 @@ import org.junit.Test;
 
 
 public class JeuTest {
-	Jeu jeu = new Jeu("Bunco+",6,4,3);
+
+	Jeu jeu = new Jeu("Bunco+",1,2,3);
+	
 	
 	/**
-	 * Test de calculerScore
+	 * Test unitaire pour getNbJoueurs
 	 *
 	 */
 	@Test
-	public void testCalculerScore() {
-		assertEquals(0,jeu.calculerScoreTour());
+	public void testGetNbJoueurs() {
+		assertEquals(2, jeu.getNbJoueurs());
 	}
-	
-	
+	/**
+	 * Test unitaire pour getNbDes
+	 *
+	 */
+	@Test
+	public void testGetNbDes() {
+		assertEquals(3, jeu.getNbDes());
+	}
+	/**
+	 * Test unitaire pour les collections de joueur ainsi que leurs Set Get
+	 *
+	 */
+	@Test
+	public void testCollectionJoueurs() {
+		Joueur j1 = new Joueur("Test1");
+		Joueur j2 = new Joueur("Test2");
+		CollectionJoueurs CJ = new CollectionJoueurs(2);
+		CJ.add(j1);
+		CJ.add(j2);
+		assert(CJ != null);
+		jeu.setCollectionJoueurs(CJ);
+		assert(jeu.getCollectionJoueurs() != null);
+	}
+	/**
+	 * Test unitaire pour les collections de dé ainsi que leurs Set Get
+	 *
+	 */
+	@Test
+	public void testCollectionDes() {
+		De d1 = new De(1,6);
+		De d2 = new De(1,6);
+		CollectionDes CD = new CollectionDes(2);
+		CD.add(d1);
+		CD.add(d2);
+		assert(CD != null);
+		jeu.setCollectionDes(CD);
+		assert(jeu.getCollectionDes() != null);
+	}
 
 }

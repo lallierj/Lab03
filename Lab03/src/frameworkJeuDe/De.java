@@ -37,6 +37,10 @@ public class De implements Comparable<De> {
 		return value;
 	}
 	
+	public void setValue(int valeur) {
+		this.value = valeur;
+	}
+	
 	public int getValue(){
 		return value;
 	}

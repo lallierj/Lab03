@@ -11,7 +11,7 @@ Code(s) perm. : LALJ26059304
 				ROYT05059408
 Professeur : Dominic St‐Jacques
 Chargés de labo : Alex Levesque et Simon Robert
-Nom du fichier : CollectionDes.java
+Nom du fichier : DeTest.java
 Date créé : 2015‐02-25
 Date dern. modif. 2015‐02-25
 *******************************************************
@@ -40,7 +40,7 @@ public class DeTest {
 	De de2 = new De(1,6);
 	
 	/**
-	 * Test de lancer le dé
+	 * Test de lancer le dé aléatoire
 	 *
 	 */
 	@Test
@@ -49,13 +49,33 @@ public class DeTest {
 		assert(de1 != null);
 		valeurDe2 = de2.lancer();
 		assert(de2 != null);
+		if (valeurDe1 >= 1 && valeurDe1 <=6 && valeurDe2 >= 1 && valeurDe2 <=6) {
+			assertTrue(true);
+		}
+		else assertFalse(true);
+		
 	}
+	/**
+	 * Test de comparer avec get et set
+	 *
+	 */
+	@Test
+	public void testComparerGetSet() {
+		de1.setValue(3);
+		de2.setValue(5);
+		assertEquals(3,de1.getValue());
+		assertEquals(5,de2.getValue());
+		assertEquals(-1,de1.compareTo(de2));
+	}
+	
 	/**
 	 * Test de comparer les dés
 	 *
 	 */
 	@Test
 	public void testCompareTo() {
+		valeurDe1 = de1.lancer();
+		valeurDe2 = de2.lancer();
 		if (valeurDe1 > valeurDe2) {
 			assertEquals(1,de1.compareTo(de2));
 		}
