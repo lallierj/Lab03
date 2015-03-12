@@ -18,39 +18,34 @@ Date dern. modif. 2015‐02-25
 Historique des modifications
 *******************************************************
 2015‐02‐25 Version initiale 
-2015-02-25 Ajout du constructeur et de la méthode lancer()
+2015-02-25 Ajout du constructeur
 *******************************************************/
-package frameworkJeuDe;
+package testUnitaireBunco;
 
-public class De implements Comparable<De> {
-	private int minValue;
-	private int maxValue;
-	private int value;
+import frameworkJeuDe.Jeu;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+/**
+ * Test unitaire pour les méthodes de jeu
+ *
+ */
+
+
+public class JeuTest {
+	Jeu jeu = new Jeu("Bunco+",6,4,3);
 	
-	public De(int minValue, int maxValue){
-		this.minValue = minValue;
-		this.maxValue = maxValue;
+	/**
+	 * Test de calculerScore
+	 *
+	 */
+	@Test
+	public void testCalculerScore() {
+		assertEquals(0,jeu.calculerScoreTour());
 	}
 	
-	public int lancer(){
-		value = (int) Math.round(Math.random() * (maxValue - minValue) + minValue);
-		return value;
-	}
 	
-	public int getValue(){
-		return value;
-	}
-	
-	@Override
-	public int compareTo(De autreDe) {
-		if(value < autreDe.getValue()){
-			return -1;
-		}
-		else if(value == autreDe.getValue()){
-			return 0;
-		}
-		else{
-			return 1;
-		}
-	}
+
 }

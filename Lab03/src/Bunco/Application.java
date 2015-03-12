@@ -1,10 +1,14 @@
 package Bunco;
 
-public class Application {
 
+import frameworkJeuDe.Jeu;
+
+public class Application {
+	private int nbJoueurs;
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+		Fabrique fabrique = new Fabrique();
+		Jeu jeu = fabrique.creerBaseJeu();
+		jeu.play();
 	}
 
 }
