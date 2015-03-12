@@ -50,7 +50,7 @@ public class CollectionJoueurs{
 		Joueur joueurTemp;
 		for(int i = 1; i < tabJoueurs.length; i++){
 			iterateur.reset();
-			for(int j = 1; j < tabJoueurs.length; j++){
+			for(int j = i; j < tabJoueurs.length; j++){
 				if(iterateur.joueurCourant().compareTo(iterateur.prochainJoueur()) == -1){
 					joueurTemp = iterateur.joueurCourant();
 					iterateur.setJoueurCourant(iterateur.prochainJoueur());
