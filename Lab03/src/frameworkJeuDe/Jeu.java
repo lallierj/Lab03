@@ -68,6 +68,11 @@ public class Jeu {
 		int i=1;
 		while(itr.hasNext()){
 			System.out.println(i+". "+itr.joueurCourant().getNom()+": "+itr.joueurCourant().getScore()+" points");
+			itr.next();
+			i++;
+			if(itr.getIndex() == collectionJoueurs.getTabJoueurs().length -1){
+				System.out.println(i+". "+itr.joueurCourant().getNom()+": "+itr.joueurCourant().getScore()+" points");
+			}
 		}
 	}
 	public int getNbJoueurs(){

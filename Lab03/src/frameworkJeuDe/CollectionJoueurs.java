@@ -47,6 +47,7 @@ public class CollectionJoueurs{
 		return new CollectionJoueurs(tabJoueurs);
 	}
 	public CollectionJoueurs trierParScore(){
+		System.out.println("le tri est supposé se faire");
 		Joueur joueurTemp;
 		for(int i = 1; i < tabJoueurs.length; i++){
 			iterateur.reset();
