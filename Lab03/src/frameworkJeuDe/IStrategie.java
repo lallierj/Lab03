@@ -11,18 +11,25 @@ Code(s) perm. : LALJ26059304
 				ROYT05059408
 Professeur : Dominic St‐Jacques
 Chargés de labo : Alex Levesque et Simon Robert
-Nom du fichier : CollectionDes.java
-Date créé : 2015‐02-25
-Date dern. modif. 2015‐02-25
-*******************************************************
-Historique des modifications
-*******************************************************
-2015‐02‐25 Version initiale 
-2015-02-25 Ajout des méthodes calculerLeVainqueur et calculerScoreTour
+Nom du fichier : Istrategie.java
+Date créé : 2015‐03-08
+Date dern. modif. 2015‐03-08
 *******************************************************/
 package frameworkJeuDe;
-
+/**
+ * Interface qui définit les méthode minimale à implémenter pour les regles d'un jeu de dé
+ * */
 public interface IStrategie {
+	/**
+	 * Méthode qui tri les joueurs et retourne la collection de joueurs triée
+	 * @param Jeu le jeu duquel on veut déterminer le gagnant
+	 * @return CollectionJoueurs la collection de joueurs triée
+	 * */
 	public CollectionJoueurs calculerLeVainqueur(Jeu jeu);
+	/**
+	 * Méthode qui détermine le pointage d'un tour et le retourne
+	 * @param Jeu le jeu duquel on veut déterminer le pointage du tour
+	 * @return int le pointage du tour
+	 * */
 	public int calculerScoreTour(Jeu jeu);
 }

@@ -12,13 +12,8 @@ Code(s) perm. : LALJ26059304
 Professeur : Dominic St‐Jacques
 Chargés de labo : Alex Levesque et Simon Robert
 Nom du fichier : DeTest.java
-Date créé : 2015‐02-25
-Date dern. modif. 2015‐02-25
-*******************************************************
-Historique des modifications
-*******************************************************
-2015‐02‐25 Version initiale 
-2015-02-25 Ajout du constructeur
+Date créé : 2015‐03-08
+Date dern. modif. 2015‐03-08
 *******************************************************/
 package testUnitaireBunco;
 
@@ -34,6 +29,12 @@ import org.junit.Test;
  */
 
 public class DeTest {
+	/**
+	 * @attr int valeurDe1 la valeur du premier dé utilisé pour les tests
+	 * @attr int valeurDe2 la valeur du deuxième dé utilisé pour les tests
+	 * @attr De de1 le premier dé utilisé pour les tests
+	 * @attr De de2 le deuxième dé utilisé pour les tests
+	 * */
 	private int valeurDe1;
 	private int valeurDe2;
 	De de1 = new De(1,6);

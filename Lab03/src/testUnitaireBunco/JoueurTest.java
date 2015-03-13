@@ -12,13 +12,8 @@ Code(s) perm. : LALJ26059304
 Professeur : Dominic St‐Jacques
 Chargés de labo : Alex Levesque et Simon Robert
 Nom du fichier : JoueurTest.java
-Date créé : 2015‐02-25
-Date dern. modif. 2015‐02-25
-*******************************************************
-Historique des modifications
-*******************************************************
-2015‐02‐25 Version initiale 
-2015-02-25 Ajout du constructeur
+Date créé : 2015‐03-08
+Date dern. modif. 2015‐03-08
 *******************************************************/
 package testUnitaireBunco;
 
@@ -34,7 +29,9 @@ import org.junit.Test;
  */
 
 public class JoueurTest {
-	
+	/**
+	 * @attr Joueur joueur1 le premier joueur utilisé pour les tests
+	 * @attr Joueur joueur2 le deuxième joueur utilisé pour les tests*/
 	Joueur joueur1 = new Joueur("Henry");
 	Joueur joueur2 = new Joueur("Thierry");
 	

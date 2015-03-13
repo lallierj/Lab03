@@ -1,3 +1,20 @@
+/******************************************************
+Cours : LOG121
+Session : H2015
+Groupe : 01
+Projet : Laboratoire #3
+Étudiant(e)(s) : Jérôme L'Allier-Décary
+				 Alexandre Lusignan
+				 Tristan Roy
+Code(s) perm. : LALJ26059304
+				LUSA11049100
+				ROYT05059408
+Professeur : Dominic St‐Jacques
+Chargés de labo : Alex Levesque et Simon Robert
+Nom du fichier : StrategieTest.java
+Date créé : 2015‐03-08
+Date dern. modif. 2015‐03-08
+*******************************************************/
 package testUnitaireBunco;
 
 import static org.junit.Assert.*;
@@ -14,13 +31,17 @@ import frameworkJeuDe.IterateurJoueur;
 import frameworkJeuDe.Jeu;
 import frameworkJeuDe.Joueur;
 public class StrategieTest{
-	
+	/**
+	 * Test de création d'une stratégie
+	 * */
 	@Test
 	public void testStrategie(){
 		IStrategie strategie = new StrategieBunco();
 		assert(strategie != null);
 	}
-	
+	/**
+	 * Test de comparaison des dés avec les valeurs de pointage et de changement de joueurs
+	 * */
 	@Test
 	public void testVerifierDes(){
 		StrategieBunco strategie = new StrategieBunco();
@@ -46,7 +67,9 @@ public class StrategieTest{
 		assertEquals(0,strategie.verifierDes(valeursDes, 6));
 		assertEquals(true,strategie.getChangerJoueur());
 	}
-	
+	/**
+	 * Test de calcul de score pour un tour
+	 * */
 	@Test
 	public void testCalculerScoreTour(){
 		Jeu jeu = new Jeu("Test", 1,1,3);
@@ -59,6 +82,9 @@ public class StrategieTest{
 		assert(score <= 0);
 		assertEquals(true,strategie.getChangerJoueur());
 	}
+	/**
+	 * Test de détermination d'un vainqueur par le tri de la collection de joueurs
+	 * */
 	@Test
 	public void testCalculerVainqueur(){
 		Jeu jeu = new Jeu("Test",1,3,3);

@@ -1,4 +1,8 @@
 eclipse.preferences.version=1
+encoding//src/Bunco/Application.java=UTF-8
+encoding//src/Bunco/Fabrique.java=UTF-8
+encoding//src/Bunco/StrategieBunco.java=UTF-8
+encoding//src/frameworkJeuDe/AbstractFabrique.java=UTF-8
 encoding//src/frameworkJeuDe/CollectionDes.java=UTF-8
 encoding//src/frameworkJeuDe/CollectionJoueurs.java=UTF-8
 encoding//src/frameworkJeuDe/De.java=UTF-8
@@ -10,3 +14,4 @@ encoding//src/frameworkJeuDe/Joueur.java=UTF-8
 encoding//src/testUnitaireBunco/DeTest.java=UTF-8
 encoding//src/testUnitaireBunco/JeuTest.java=UTF-8
 encoding//src/testUnitaireBunco/JoueurTest.java=UTF-8
+encoding//src/testUnitaireBunco/StrategieTest.java=UTF-8
