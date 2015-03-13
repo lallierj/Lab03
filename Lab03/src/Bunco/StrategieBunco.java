@@ -60,7 +60,7 @@ public class StrategieBunco implements IStrategie {
 				i++;
 			}
 			System.out.println("Lancer: "+tabValeurs[0]+"  "+tabValeurs[1]+"  "+tabValeurs[2]);
-			scoreTour = verifierDes(tabValeurs, jeu.getCurrentRound());
+			scoreTour += verifierDes(tabValeurs, jeu.getCurrentRound());
 			System.out.println("Score du tour jusqu'à maintenant: "+scoreTour);
 		}
 		
