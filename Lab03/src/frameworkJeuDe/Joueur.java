@@ -27,6 +27,7 @@ public class Joueur implements Comparable<Joueur> {
 	private int score;
 	
 	public Joueur(String nom){
+		score = 0;
 		this.nom = nom;
 	}
 	

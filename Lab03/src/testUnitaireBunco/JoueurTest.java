@@ -87,7 +87,7 @@ public class JoueurTest {
 		assertEquals(1,joueur1.compareTo(joueur2));
 		assertEquals(-1,joueur2.compareTo(joueur1));
 		//Score égaux
-		joueur1.setScore(10);
+		joueur2.setScore(7);
 		assertEquals(0,joueur1.compareTo(joueur2));
 		
 	}

@@ -84,6 +84,9 @@ public class Jeu {
 	public int getCurrentRound(){
 		return rondeCourante;
 	}
+	public IStrategie getStrategie(){
+		return strategie;
+	}
 	public CollectionJoueurs getCollectionJoueurs(){
 		return collectionJoueurs.clone();
 	}
